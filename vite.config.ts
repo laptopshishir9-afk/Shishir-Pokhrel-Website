@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: './',
+    base: process.env.BASE_URL || (process.env.NODE_ENV === 'production' ? '/Shishir-Pokhrel-Website/' : './'),
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
